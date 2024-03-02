@@ -1,0 +1,251 @@
+body {
+    background-color: #000000;
+    color: #eeeeee;
+    position: relative;
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+main {
+    position: absolute;
+    width: max(300px, 36%);
+    padding: 2vh 0 16vh;
+    top: 10vh;
+    left: 12vh;
+}
+
+main::before, main::after {
+    content: "";
+    position: fixed;
+    width: max(300px, 36%);
+    left: 12vh;
+    z-index: 10;
+}
+
+main::before {
+    height: 5vh;
+    background: linear-gradient(#000000 4vh, transparent 5vh);
+    top: 0;
+}
+
+main::after {
+    height: 20vh;
+    background: linear-gradient(to bottom, transparent 1vh, black 14vh);
+    bottom: 0;
+}
+
+.line {
+    position: fixed;
+    background-color: #eeeeee;
+    border-radius: 3px;
+    z-index: 20;
+}
+
+.line.top {
+    width: calc(100vw - 20px);
+    height: 4px;
+    top: 23px;
+    left: 10px;
+}
+
+.line.bottom {
+    width: calc(100vw - 20px);
+    height: 4px;
+    bottom: 23px;
+    left: 10px;
+}
+
+.line.right {
+    width: 4px;
+    height: calc(100vh - 20px);
+    right: 23px;
+    top: 10px;
+}
+
+.line.left {
+    width: 4px;
+    height: calc(100vh - 20px);
+    left: 23px;
+    top: 10px;
+}
+
+.bg-image {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 52%;
+}
+
+.bg-image img {
+    width: 100%;
+    height: 100vh;
+    mask-image: url('assets/survey-desktop.svg');
+    mask-position: center left;
+    mask-size: cover;
+}
+
+/* Start Form CSS */
+
+h1, .container > p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.1rem;
+    margin-bottom: 12px;
+}
+
+main > p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+label > span, legend > span {
+    font-size: 16px;
+}
+
+input:not([type="radio"]):not([type="checkbox"]), select {
+    width: 100%;
+    border: 0;
+    margin-top: 6px;
+    height: 32px;
+}
+
+input[type="text"], input[type="email"], input[type="number"] {
+    box-sizing: border-box;
+    padding: 0 12px;
+    outline-color: #ffff00;
+}
+
+input:invalid {
+    outline-color: #ff0000;
+}
+
+input:valid {
+    outline-color: #008000;
+}
+
+/* Input type number buttons *** JUST CHROME *** */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    transform: scale(1.4);
+}
+/* Input type number buttons */
+
+legend {
+    margin-bottom: 16px;
+    font-size: 18px;
+    padding: 0 5px;
+}
+
+fieldset {
+    margin-bottom: 24px;
+}
+
+fieldset > label {
+    margin-bottom: 16px;
+}
+
+textarea {
+    width: 100%;
+    margin-top: 6px;
+    box-sizing: border-box;
+    padding: 12px;
+    outline-color: #ff4500;
+}
+
+button {
+    width: 80%;
+    margin: 0 10%;
+    padding: 10px;
+    background-color: #ca6d2a;
+    color: #eeeeee;
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+button:hover {
+    background-color: hsl(120, 66%, 48%);
+}
+/* End Form CSS */
+
+@media only screen and (max-width: 880px) and (min-width: 501px) {
+    .bg-image {
+        background: url("assets/form-background.jpg");
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        z-index: -1;
+    }
+
+    .bg-image img {
+        display: none;
+    }
+
+    main::after, main::before {
+        display: none;
+    }
+
+    main {
+        background-color: #00000099;
+        padding: 20px;
+        position: fixed;
+        border-radius: 20px;
+    }
+
+    .container {
+        height: 76vh;
+        overflow-y: scroll;
+    }
+
+    .container::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .bg-image {
+        background: url("assets/form-background.jpg");
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        z-index: -1;
+    }
+
+    main::after, main::before {
+        display: none;
+    }
+
+    main {
+        width: 80%;
+        padding: 20px;
+        position: static;
+        margin: 0 auto;
+        border-radius: 0;
+        background-color: #00000099;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .container {
+        height: 100%;
+    }
+}

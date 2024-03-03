@@ -7,12 +7,12 @@
   <p align="center">Screenshots of devices with screens 881px or larger</p>
 </p>
 <br>
-<p>
+<p align="center">
   <span align="left">
-    <img width="55%" src="https://github.com/dev-thuong/freecodecamp-survey-form/assets/161289991/bbe3e4f1-cafc-40d8-9748-16afdf212650" hspace="5%">
+    <img width="54.5%" src="https://github.com/dev-thuong/freecodecamp-survey-form/assets/161289991/bbe3e4f1-cafc-40d8-9748-16afdf212650" hspace="5%">
   </span>
   <span>
-    <img width="25%" src="https://github.com/dev-thuong/freecodecamp-survey-form/assets/161289991/de15867f-1f85-4f66-ad19-286cad50b061">
+    <img width="25.5%" src="https://github.com/dev-thuong/freecodecamp-survey-form/assets/161289991/de15867f-1f85-4f66-ad19-286cad50b061">
   </span>
 </p>
 <p align="center">501px to 880px screens (left image) and 500px or less screens (right image)</p>
